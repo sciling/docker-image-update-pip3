@@ -1,0 +1,3 @@
+#! /bin/sh
+
+docker push "${TARGET_IMAGE_NAME}:${BASE_IMAGE_VERSION}"

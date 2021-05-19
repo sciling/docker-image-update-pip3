@@ -1,0 +1,8 @@
+#! /bin/sh
+
+docker build \
+  --build-arg="BASE_IMAGE=${BASE_IMAGE_NAME}:${BASE_IMAGE_VERSION}" \
+  --tag="${TARGET_IMAGE_NAME}:latest" \
+  --tag="${TARGET_IMAGE_NAME}:${BASE_IMAGE_VERSION}" \
+  --file="${DOCKERFILE_PATH}" \
+  .
