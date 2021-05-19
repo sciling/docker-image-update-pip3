@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  image:
+    image: ${TARGET_IMAGE_NAME}:${BASE_IMAGE_VERSION}
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        BASE_IMAGE_NAME: ${BASE_IMAGE_NAME}
+        TARGET_IMAGE_NAME: ${TARGET_IMAGE_NAME}
+        BASE_IMAGE_VERSION: ${BASE_IMAGE_VERSION}
