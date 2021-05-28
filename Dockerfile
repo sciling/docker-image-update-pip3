@@ -7,4 +7,5 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /var/src/*
 RUN python3 -m pip install --upgrade pip poetry
+RUN poetry config virtualenvs.create false
 ENV PYTHONIOENCODING UTF-8
